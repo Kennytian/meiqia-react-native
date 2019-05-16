@@ -1,0 +1,6 @@
+rootProject.name = 'examples'
+
+include ':meiqia-react-native'
+project(':meiqia-react-native').projectDir = new File(rootProject.projectDir, '../node_modules/meiqia-react-native/android')
+
+include ':app'
