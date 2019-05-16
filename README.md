@@ -5,6 +5,10 @@
 
 `$ npm install meiqia-react-native --save`
 
+or
+
+`$ yarn add meiqia-react-native`
+
 ### Mostly automatic installation
 
 `$ react-native link meiqia-react-native`
@@ -26,7 +30,7 @@
 2. Append the following lines to `android/settings.gradle`:
   	```
   	include ':meiqia-react-native'
-  	project(':meiqia-react-native').projectDir = new File(rootProject.projectDir, 	'../node_modules/meiqia-react-native/android')
+  	project(':meiqia-react-native').projectDir = new File(rootProject.projectDir, '../node_modules/meiqia-react-native/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
