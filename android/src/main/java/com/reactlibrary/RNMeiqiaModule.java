@@ -1,10 +1,10 @@
-
 package com.reactlibrary;
 
 import android.content.Intent;
+
 import com.facebook.react.bridge.*;
 import com.meiqia.core.MQScheduleRule;
-import com.meiqia.meiqiasdk.imageloader.MQGlideImageLoader4;
+import com.meiqia.meiqiasdk.imageloader.MQGlideImageLoader;
 import com.meiqia.meiqiasdk.imageloader.MQImage;
 import com.meiqia.meiqiasdk.util.MQConfig;
 import com.meiqia.core.callback.OnInitCallback;
@@ -109,7 +109,7 @@ public class RNMeiqiaModule extends ReactContextBaseJavaModule {
                 intentConfig.setScheduleRule(MQScheduleRule.REDIRECT_ENTERPRISE);
             }
         }
-        MQImage.setImageLoader(new MQGlideImageLoader4());
+        MQImage.setImageLoader(new MQGlideImageLoader());
         Intent intent = intentConfig.build();
         reactContext.startActivity(intent);
     }
