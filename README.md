@@ -1,7 +1,8 @@
-
-# meiqia-react-native
+# 美洽SDK for React Native
 
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/meiqia-react-native.svg)](https://www.npmjs.com/package/meiqia-react-native)
+[![Downloads](https://img.shields.io/npm/dm/meiqia-react-native.svg)](https://www.npmjs.com/package/meiqia-react-native)
 
 ## Getting started
 
