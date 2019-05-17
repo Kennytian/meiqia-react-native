@@ -2,9 +2,14 @@ demo/
 examples/
 node_modules/
 android/build/
+android/.idea/
 ios/build/
 .DS_Store
 .idea
 .editorconfig
 .gitignore
 *.log
+*.iml
+*.properties
+.gradle
+build/
