@@ -3621,10 +3621,10 @@ math-random@^1.0.1:
   resolved "https://registry.yarnpkg.com/math-random/-/math-random-1.0.4.tgz#5dd6943c938548267016d4e34f057583080c514c"
   integrity sha512-rUxjysqif/BZQH2yhd5Aaq7vXMSx9NdEsQcyA07uEzIvxgI7zIr33gGsh+RU0/XjmQpCW7RsVof1vlkvQVCK5A==
 
-meiqia-react-native@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/meiqia-react-native/-/meiqia-react-native-0.0.1.tgz#4cc1dafcf688be1b7ea320ad94a54fc414ff5073"
-  integrity sha512-NiN1pUKdcGGN93t2+rkUag63+i1agVt0yxhIS7O4YPi5Uzjddn0tAs9T+WW1eB3gUNjHkr2idFF3CElJpHhNzA==
+meiqia-react-native@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/meiqia-react-native/-/meiqia-react-native-0.0.2.tgz#678562bb4cf1155f139f90892f2b7fc4e8bbf4e1"
+  integrity sha512-wICb0LEJ4MRpv+tXv5cDLwFmlHMpzWv27rIjpgnDvU/7wXzwYEeoUV72Wu37I2Vlk7DppDnKr8k1aj0apiG5ig==
 
 mem@^1.1.0:
   version "1.1.0"

@@ -13,7 +13,7 @@
 RCT_EXPORT_MODULE()
 
 //初始化SDK
-RCT_EXPORT_METHOD(initSDK: (NSDictionary *)param resolve: (RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
+RCT_EXPORT_METHOD(init: (NSDictionary *)param resolve: (RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
     NSString *AppKey = @"";
     if ((NSString *)param[@"appKey"] != nil) {
         AppKey = (NSString *)param[@"appKey"];
@@ -29,7 +29,7 @@ RCT_EXPORT_METHOD(initSDK: (NSDictionary *)param resolve: (RCTPromiseResolveBloc
             }
         }];
     }else{
-        NSDictionary *ret = @{@"code": @"1", @"message":@"AppKey为空"};
+        NSDictionary *ret = @{@"code": @"1", @"message":@"appKey is missing"};
         resolve(ret);
     }
 }
