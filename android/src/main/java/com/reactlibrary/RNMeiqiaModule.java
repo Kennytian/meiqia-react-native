@@ -26,11 +26,11 @@ public class RNMeiqiaModule extends ReactContextBaseJavaModule {
         return "RNMeiqia";
     }
 
-    @ReactMethod // 初始化SDK ----传入AppKey
-    public void initSDK(final ReadableMap data, final Promise p) {
-        String AppKey = data.getString("appKey");
-        if (!AppKey.equals("")) {
-            MQConfig.init(reactContext, AppKey, new OnInitCallback() {
+    @ReactMethod
+    public void init(final ReadableMap data, final Promise p) {
+        String appKey = data.getString("appKey");
+        if (!appKey.equals("")) {
+            MQConfig.init(reactContext, appKey, new OnInitCallback() {
                 @Override
                 public void onSuccess(String clientId) {
                     WritableMap map = Arguments.createMap();
@@ -50,7 +50,7 @@ public class RNMeiqiaModule extends ReactContextBaseJavaModule {
             });
         } else {
             WritableMap map = Arguments.createMap();
-            map.putString("message", "AppKey");
+            map.putString("message", "appKey is missing");
             map.putString("code", Integer.toString(1));
             p.resolve(map);
         }

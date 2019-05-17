@@ -38,9 +38,39 @@ or
   	```
 
 ## Usage
-```javascript
-import { initSDK, show } from 'meiqia-react-native';
 
-initSDK({ appKey:'xxx' });
-show({ titleColor: '', titleBarColor: '', naviColor: '', clientInfo: {} });
+#### import
+```javascript
+import { init, show } from 'meiqia-react-native';
 ```
+
+#### init appKey
+```javascript
+init({ appKey:'xxx' }).then((config)=>{
+    console.log('config info:', config);
+    // {"code:": 0, "clientId": "xxxxx", "message": 'success'}
+});
+```
+
+#### launch chat window
+```javascript
+show(); 
+```
+or, if you known
+
+```javascript
+show({
+  titleColor: '',
+  titleBarColor: '', 
+  naviColor: '', 
+  clientInfo: {}, 
+  customId:{id:''}, 
+  clientId:{id:''}, 
+  scheduledInfo:{agentId:'', agentGroup:'', scheduleRule: 'none|group|enterprise', },
+});
+```
+
+> Now, we can see the default chat window
+
+![](./screenshot/screenshot1.png)
+
