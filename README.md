@@ -1,7 +1,8 @@
-
-# meiqia-react-native
+# 美洽SDK for React Native
 
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/meiqia-react-native.svg)](https://www.npmjs.com/package/meiqia-react-native)
+[![Downloads](https://img.shields.io/npm/dm/meiqia-react-native.svg)](https://www.npmjs.com/package/meiqia-react-native)
 
 ## Getting started
 
@@ -43,12 +44,12 @@ or
 
 #### import
 ```javascript
-import { init, show } from 'meiqia-react-native';
+import Meiqia from 'meiqia-react-native';
 ```
 
 #### init appKey
 ```javascript
-init({ appKey:'xxx' }).then((config)=>{
+Meiqia.init({ appKey:'xxx' }).then((config)=>{
     console.log('config info:', config);
     // {"code:": 0, "clientId": "xxxxx", "message": 'success'}
 });
@@ -56,16 +57,28 @@ init({ appKey:'xxx' }).then((config)=>{
 
 #### launch chat window
 ```javascript
-show(); 
+Meiqia.show(); 
 ```
 or, if you known
 
 ```javascript
-show({
+Meiqia.show({
   titleColor: '',
   titleBarColor: '', 
   naviColor: '', 
-  clientInfo: {}, 
+  clientInfo: {
+      name: 'Kenny锅',
+      gender: '男',
+      age: '20',
+      tel: '13800138000',
+      weixin: 'wechat007',
+      weibo: 'weibo007',
+      address: '湖北省武汉市xxx',
+      email: 'kenny@china.com',
+      avator: 'https://s3.cn-north-1.amazonaws.com.cn/pics.meiqia.bucket/1dee88eabfbd7bd4',
+      source: '朋友推荐',
+      comment: '全栈，就是了不起，备注也没问题'
+  }, 
   customId:{id:''}, 
   clientId:{id:''}, 
   scheduledInfo:{agentId:'', agentGroup:'', scheduleRule: 'none|group|enterprise', },
@@ -75,4 +88,6 @@ show({
 > Now, we can see the default chat window
 
 ![](./screenshot/screenshot1.png)
+
+![](./screenshot/screenshot2.png)
 

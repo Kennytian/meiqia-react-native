@@ -8,18 +8,40 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import { init, show } from 'meiqia-react-native';
+import Meiqia from 'meiqia-react-native';
 
 type Props = {};
 export default class App extends Component<Props> {
+
+  componentDidMount() {
+    Meiqia.init({appKey:'b20bf39620fdd43f11128182ff77a551'}).then((data)=>{
+      alert(JSON.stringify(data));
+    });
+  }
+
   initSdk = () => {
-    init({appKey:'b20bf39620fdd43f11128182ff77a557'}).then((data)=>{
+    Meiqia.init({appKey:'b20bf39620fdd43f11128182ff77a551'}).then((data)=>{
       alert(JSON.stringify(data));
     });
   };
 
   letUsChat = () => {
-    show();
+    const data = {
+      clientInfo: {
+        name: 'Kenny锅',
+        gender: '男',
+        age: '20',
+        tel: '13800138000',
+        weixin: 'wechat007',
+        weibo: 'weibo007',
+        address: '湖北省武汉市xxx',
+        email: 'kenny@china.com',
+        avator: 'https://s3.cn-north-1.amazonaws.com.cn/pics.meiqia.bucket/1dee88eabfbd7bd4',
+        source: '朋友推荐',
+        comment: '全栈，就是了不起，备注也没问题'
+      },
+    };
+    Meiqia.show(data);
   };
 
   render() {
