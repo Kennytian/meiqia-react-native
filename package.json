@@ -1,7 +1,7 @@
 
 {
   "name": "meiqia-react-native",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -22,8 +22,8 @@
     "ios",
     "android"
   ],
-  "author": "",
-  "license": "MIT",
+  "author": "Kenny Tian",
+  "license": "Anti996",
   "peerDependencies": {
     "react-native": ">=0.40.0"
   }
