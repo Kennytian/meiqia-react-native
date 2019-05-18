@@ -150,6 +150,13 @@
 		B9087220228ED8590063E8FA /* UIViewController+MQOrientationFix.m in Sources */ = {isa = PBXBuildFile; fileRef = B9087190228ED8590063E8FA /* UIViewController+MQOrientationFix.m */; };
 		B9087221228ED85A0063E8FA /* UIViewController+MQHieriachy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9087191228ED8590063E8FA /* UIViewController+MQHieriachy.m */; };
 		B9087222228ED85A0063E8FA /* MQServiceToViewInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = B9087194228ED8590063E8FA /* MQServiceToViewInterface.m */; };
+		B9087225228F91700063E8FA /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9087224228F916F0063E8FA /* QuickLook.framework */; };
+		B9087227228F91FA0063E8FA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9087226228F91FA0063E8FA /* MobileCoreServices.framework */; };
+		B9087229228F92080063E8FA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9087228228F92080063E8FA /* SystemConfiguration.framework */; };
+		B908722B228F92190063E8FA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B908722A228F92190063E8FA /* CoreTelephony.framework */; };
+		B908722D228F92270063E8FA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B908722C228F92270063E8FA /* AVFoundation.framework */; };
+		B908722F228F92440063E8FA /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B908722E228F92440063E8FA /* libicucore.tbd */; };
+		B9087231228F92520063E8FA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B9087230228F92520063E8FA /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -458,6 +465,13 @@
 		B9087191228ED8590063E8FA /* UIViewController+MQHieriachy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MQHieriachy.m"; sourceTree = "<group>"; };
 		B9087193228ED8590063E8FA /* MQServiceToViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQServiceToViewInterface.h; sourceTree = "<group>"; };
 		B9087194228ED8590063E8FA /* MQServiceToViewInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQServiceToViewInterface.m; sourceTree = "<group>"; };
+		B9087224228F916F0063E8FA /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		B9087226228F91FA0063E8FA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B9087228228F92080063E8FA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B908722A228F92190063E8FA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		B908722C228F92270063E8FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B908722E228F92440063E8FA /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		B9087230228F92520063E8FA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -465,6 +479,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9087231228F92520063E8FA /* libsqlite3.tbd in Frameworks */,
+				B908722F228F92440063E8FA /* libicucore.tbd in Frameworks */,
+				B908722D228F92270063E8FA /* AVFoundation.framework in Frameworks */,
+				B908722B228F92190063E8FA /* CoreTelephony.framework in Frameworks */,
+				B9087229228F92080063E8FA /* SystemConfiguration.framework in Frameworks */,
+				B9087227228F91FA0063E8FA /* MobileCoreServices.framework in Frameworks */,
+				B9087225228F91700063E8FA /* QuickLook.framework in Frameworks */,
 				B90871AF228ED8590063E8FA /* libopencore-amrwb.a in Frameworks */,
 				B90871B0228ED8590063E8FA /* libopencore-amrnb.a in Frameworks */,
 				B9087195228ED8590063E8FA /* MeiQiaSDK.framework in Frameworks */,
@@ -489,6 +510,7 @@
 				B3E7B5881CC2AC0600A0062D /* RNMeiqia.h */,
 				B3E7B5891CC2AC0600A0062D /* RNMeiqia.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				B9087223228F916F0063E8FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -500,8 +522,7 @@
 				B9087065228ED8590063E8FA /* MQChatViewController */,
 				B908703E228ED8590063E8FA /* MQMessageForm */,
 			);
-			name = MeiQiaSDK;
-			path = "MeiQiaSDK";
+			path = MeiQiaSDK;
 			sourceTree = "<group>";
 		};
 		B908703E228ED8590063E8FA /* MQMessageForm */ = {
@@ -1220,6 +1241,20 @@
 				B9087194228ED8590063E8FA /* MQServiceToViewInterface.m */,
 			);
 			path = MeiqiaSDKViewInterface;
+			sourceTree = "<group>";
+		};
+		B9087223228F916F0063E8FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9087230228F92520063E8FA /* libsqlite3.tbd */,
+				B908722E228F92440063E8FA /* libicucore.tbd */,
+				B908722C228F92270063E8FA /* AVFoundation.framework */,
+				B908722A228F92190063E8FA /* CoreTelephony.framework */,
+				B9087228228F92080063E8FA /* SystemConfiguration.framework */,
+				B9087226228F91FA0063E8FA /* MobileCoreServices.framework */,
+				B9087224228F916F0063E8FA /* QuickLook.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
