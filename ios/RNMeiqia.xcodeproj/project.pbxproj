@@ -1546,7 +1546,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MeiqiaSDK",
-					"$(PROJECT_DIR)/New\\ Group",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1557,8 +1556,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MeiqiaSDK/MQChatViewController/Vendors/MLAudioRecorder/amr_en_de/lib",
-					"$(PROJECT_DIR)/New\\ Group/MQChatViewController/Vendors/MLAudioRecorder/amr_en_de/lib",
-					"$(PROJECT_DIR)/New\\ Group/MQChatViewController/Vendors/MLAudioRecorder/amr_en_de/lib",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNMeiqia;
@@ -1572,7 +1569,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MeiqiaSDK",
-					"$(PROJECT_DIR)/New\\ Group",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1583,8 +1579,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MeiqiaSDK/MQChatViewController/Vendors/MLAudioRecorder/amr_en_de/lib",
-					"$(PROJECT_DIR)/New\\ Group/MQChatViewController/Vendors/MLAudioRecorder/amr_en_de/lib",
-					"$(PROJECT_DIR)/New\\ Group/MQChatViewController/Vendors/MLAudioRecorder/amr_en_de/lib",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNMeiqia;
