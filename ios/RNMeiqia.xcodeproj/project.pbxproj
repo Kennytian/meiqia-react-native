@@ -157,6 +157,7 @@
 		B9087258228F9EF60063E8FA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9087257228F9EF60063E8FA /* AVFoundation.framework */; };
 		B908725A228F9F7D0063E8FA /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B9087259228F9F7D0063E8FA /* libicucore.tbd */; };
 		B908725C228F9F8B0063E8FA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B908725B228F9F8B0063E8FA /* libsqlite3.tbd */; };
+		B90873A5228FF1DA0063E8FA /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = B90873A4228FF1DA0063E8FA /* UIColor+Hex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -472,6 +473,8 @@
 		B9087257228F9EF60063E8FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B9087259228F9F7D0063E8FA /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		B908725B228F9F8B0063E8FA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		B90873A3228FF1DA0063E8FA /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		B90873A4228FF1DA0063E8FA /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -517,6 +520,8 @@
 		B9086F80228ECFD50063E8FA /* MeiQiaSDK */ = {
 			isa = PBXGroup;
 			children = (
+				B90873A3228FF1DA0063E8FA /* UIColor+Hex.h */,
+				B90873A4228FF1DA0063E8FA /* UIColor+Hex.m */,
 				B908703D228ED8580063E8FA /* MeiQiaSDK.framework */,
 				B9087192228ED8590063E8FA /* MeiqiaSDKViewInterface */,
 				B9087065228ED8590063E8FA /* MQChatViewController */,
@@ -1326,6 +1331,7 @@
 				B90871AC228ED8590063E8FA /* XlpEmojiCell.m in Sources */,
 				B90871B7228ED8590063E8FA /* MEIQIA_FBFontSymbol.m in Sources */,
 				B9087202228ED8590063E8FA /* MQImageUtil.m in Sources */,
+				B90873A5228FF1DA0063E8FA /* UIColor+Hex.m in Sources */,
 				B9087206228ED8590063E8FA /* MQPreChatFormViewModel.m in Sources */,
 				B90871A4228ED8590063E8FA /* MEIQIA_HPTextViewInternal.m in Sources */,
 				B90871C7228ED8590063E8FA /* MQBotAnswerMessage.m in Sources */,

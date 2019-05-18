@@ -1,8 +1,11 @@
-# 美洽SDK for React Native
+# MeiQia SDK for React Native
 
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Kennytian/meiqia-react-native/pulls)
 [![npm](https://img.shields.io/npm/v/meiqia-react-native.svg)](https://www.npmjs.com/package/meiqia-react-native)
 [![Downloads](https://img.shields.io/npm/dm/meiqia-react-native.svg)](https://www.npmjs.com/package/meiqia-react-native)
+![GitHub contributors](https://img.shields.io/github/contributors/Kennytian/meiqia-react-native.svg)
+![GitHub last commit](https://img.shields.io/github/last-commit/Kennytian/meiqia-react-native.svg)
 
 ## Getting started
 
@@ -16,6 +19,13 @@ or
 
 `$ react-native link meiqia-react-native`
 
+#### iOS
+1. Select you app target on XCode and click the `Build Settings` tab. Go to the `Framework Search Paths` section and add this new entry
+   ```
+   $(SRCROOT)/../node_modules/meiqia-react-native/ios
+   ```
+   and make sure it is set to `recursive`
+
 ### Manual installation
 
 #### iOS
@@ -23,7 +33,12 @@ or
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
 2. Go to `node_modules` ➜ `meiqia-react-native` and add `RNMeiqia.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNMeiqia.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
+4. Select you app target on XCode and click the `Build Settings` tab. Go to the `Framework Search Paths` section and add this new entry
+   ```
+   $(SRCROOT)/../node_modules/meiqia-react-native/ios
+   ```
+   and make sure it is set to `recursive`
+5. Run your project (`Cmd+R`)<
 
 #### Android
 
@@ -31,25 +46,25 @@ or
   - Add `import com.reactlibrary.RNMeiqiaPackage;` to the imports at the top of the file
   - Add `new RNMeiqiaPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
-  	```
+   ```
   	include ':meiqia-react-native'
   	project(':meiqia-react-native').projectDir = new File(rootProject.projectDir, '../node_modules/meiqia-react-native/android')
-  	```
+   ```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':meiqia-react-native')
-  	```
+   ```
+   compile project(':meiqia-react-native')
+   ```
 
 ## Usage
 
 #### import
 ```javascript
-import Meiqia from 'meiqia-react-native';
+import { MeiqiaInit, MeiqiaShow } from 'meiqia-react-native';
 ```
 
 #### init appKey
 ```javascript
-Meiqia.init({ appKey:'xxx' }).then((config)=>{
+MeiqiaInit({ appKey:'xxx' }).then((config)=>{
     console.log('config info:', config);
     // {"code:": 0, "clientId": "xxxxx", "message": 'success'}
 });
@@ -57,12 +72,12 @@ Meiqia.init({ appKey:'xxx' }).then((config)=>{
 
 #### launch chat window
 ```javascript
-Meiqia.show(); 
+MeiqiaShow(); 
 ```
 or, if you known
 
 ```javascript
-Meiqia.show({
+MeiqiaShow({
   titleColor: '',
   titleBarColor: '', 
   naviColor: '', 
@@ -87,7 +102,13 @@ Meiqia.show({
 
 > Now, we can see the default chat window
 
+## Screenshot
+
+### Android
+
 ![](./screenshot/screenshot1.png)
 
 ![](./screenshot/screenshot2.png)
 
+### iOS
+![](./screenshot/screenshot3.png)
