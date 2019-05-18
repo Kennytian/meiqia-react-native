@@ -38,6 +38,7 @@
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		B9087356228FD7A60063E8FA /* libRNMeiqia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B90872FC228FB27C0063E8FA /* libRNMeiqia.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -314,9 +315,9 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
-		B908702D228ED70F0063E8FA /* PBXContainerItemProxy */ = {
+		B90872FB228FB27C0063E8FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B9087029228ED70F0063E8FA /* RNMeiqia.xcodeproj */;
+			containerPortal = B90872F7228FB27C0063E8FA /* RNMeiqia.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNMeiqia;
@@ -351,7 +352,7 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		AF164E951C2B41948F236C41 /* libRNMeiqia.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNMeiqia.a; sourceTree = "<group>"; };
-		B9087029228ED70F0063E8FA /* RNMeiqia.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNMeiqia.xcodeproj; path = ../../ios/RNMeiqia.xcodeproj; sourceTree = "<group>"; };
+		B90872F7228FB27C0063E8FA /* RNMeiqia.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNMeiqia.xcodeproj; path = "../node_modules/meiqia-react-native/ios/RNMeiqia.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +368,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9087356228FD7A60063E8FA /* libRNMeiqia.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -553,7 +555,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				B9087029228ED70F0063E8FA /* RNMeiqia.xcodeproj */,
+				B90872F7228FB27C0063E8FA /* RNMeiqia.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -622,10 +624,10 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		B908702A228ED70F0063E8FA /* Products */ = {
+		B90872F8228FB27C0063E8FA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B908702E228ED70F0063E8FA /* libRNMeiqia.a */,
+				B90872FC228FB27C0063E8FA /* libRNMeiqia.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -790,8 +792,8 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
-					ProductGroup = B908702A228ED70F0063E8FA /* Products */;
-					ProjectRef = B9087029228ED70F0063E8FA /* RNMeiqia.xcodeproj */;
+					ProductGroup = B90872F8228FB27C0063E8FA /* Products */;
+					ProjectRef = B90872F7228FB27C0063E8FA /* RNMeiqia.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1064,11 +1066,11 @@
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B908702E228ED70F0063E8FA /* libRNMeiqia.a */ = {
+		B90872FC228FB27C0063E8FA /* libRNMeiqia.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRNMeiqia.a;
-			remoteRef = B908702D228ED70F0063E8FA /* PBXContainerItemProxy */;
+			remoteRef = B90872FB228FB27C0063E8FA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1262,6 +1264,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/meiqia-react-native/ios/**";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/meiqia-react-native/ios/**",
@@ -1284,6 +1287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/meiqia-react-native/ios/**";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/meiqia-react-native/ios/**",

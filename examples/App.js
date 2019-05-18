@@ -7,20 +7,13 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import Meiqia from 'meiqia-react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { MeiqiaInit, MeiqiaShow } from 'meiqia-react-native';
 
 type Props = {};
 export default class App extends Component<Props> {
-
-  componentDidMount() {
-    Meiqia.init({appKey:'b20bf39620fdd43f11128182ff77a551'}).then((data)=>{
-      alert(JSON.stringify(data));
-    });
-  }
-
   initSdk = () => {
-    Meiqia.init({appKey:'b20bf39620fdd43f11128182ff77a551'}).then((data)=>{
+    MeiqiaInit({appKey:'b20bf39620fdd43f11128182ff77a551'}).then((data)=>{
       alert(JSON.stringify(data));
     });
   };
@@ -41,7 +34,7 @@ export default class App extends Component<Props> {
         comment: '全栈，就是了不起，备注也没问题'
       },
     };
-    Meiqia.show(data);
+    MeiqiaShow(data);
   };
 
   render() {
