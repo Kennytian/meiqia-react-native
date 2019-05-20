@@ -102,6 +102,29 @@ MeiqiaShow({
 
 > Now, we can see the default chat window
 
+## APIs
+### MeiqiaInit
+
+MeiqiaInit({param1, param2, ...});
+
+| param name | param type | default value | platform
+| :------: | :------ | :------ | :------: |
+| appKey | string | required | all
+
+### MeiqiaShow
+
+MeiqiaShow({param1, param2, ...});
+
+| param name | param type | default value | platform
+| :------: | :------ | :------ | :------: |
+| titleColor | string | '#000000' | iOS
+| titleBarColor | string | '' | iOS
+| naviColor | string | '' | iOS
+| clientInfo | Object | {} | all
+| customId | Object | {} | all
+| clientId | Object | {} | all
+| scheduledInfo | Object | {} | all
+
 ## Screenshot
 
 ### Android
