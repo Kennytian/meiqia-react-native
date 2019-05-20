@@ -109,7 +109,7 @@ public class RNMeiqiaModule extends ReactContextBaseJavaModule {
                 intentConfig.setScheduleRule(MQScheduleRule.REDIRECT_ENTERPRISE);
             }
         }
-        MQImage.setImageLoader(new MQGlideImageLoader());
+        MQImage.setImageLoader(new MQPicassoImageLoader());
         Intent intent = intentConfig.build();
         reactContext.startActivity(intent);
     }
