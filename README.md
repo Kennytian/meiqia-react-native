@@ -105,7 +105,7 @@ MeiqiaShow({
 ## APIs
 ### MeiqiaInit
 
-MeiqiaInit({param1, param2, ...});
+`MeiqiaInit({param1, param2, ...});`
 
 | param name | param type | default value | platform
 | :------: | :------ | :------ | :------: |
@@ -113,7 +113,7 @@ MeiqiaInit({param1, param2, ...});
 
 ### MeiqiaShow
 
-MeiqiaShow({param1, param2, ...});
+`MeiqiaShow({param1, param2, ...});`
 
 | param name | param type | default value | platform
 | :------: | :------ | :------ | :------: |
@@ -124,6 +124,24 @@ MeiqiaShow({param1, param2, ...});
 | customId | Object | {} | all
 | clientId | Object | {} | all
 | scheduledInfo | Object | {} | all
+
+### MeiqiaStartService
+
+`MeiqiaStartService();`
+
+> NOTICE: This function is  only for iOS
+
+### MeiqiaStopService
+                     
+`MeiqiaStopService();`
+
+> NOTICE: This function only for iOS
+
+### MeiqiaRegisterDeviceToken
+
+`MeiqiaRegisterDeviceToken('xxxx-xxx-xxx');`
+
+> NOTICE: This function only for iOS
 
 ## Screenshot
 

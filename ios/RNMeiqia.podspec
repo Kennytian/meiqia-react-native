@@ -1,12 +1,12 @@
 
 Pod::Spec.new do |s|
   s.name         = "RNMeiqia"
-  s.version      = "0.0.7"
+  s.version      = "0.0.8"
   s.summary      = "RNMeiqia"
   s.description  = <<-DESC
                   RNMeiqia
                    DESC
-  s.homepage     = ""
+  s.homepage     = "https://github.com/Kennytian/meiqia-react-native"
   s.license      = "Anti996"
   # s.license      = { :type => "Anti996", :file => "FILE_LICENSE" }
   s.author             = { "Kenny Tian" => "kenny_tian@outlook.com" }

@@ -7,14 +7,34 @@
  */
 
 import React, {Component} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { MeiqiaInit, MeiqiaShow } from 'meiqia-react-native';
+import { AppState, StyleSheet, Text, View } from 'react-native';
+import { MeiqiaInit, MeiqiaShow, MeiqiaStartService, MeiqiaStopService } from 'meiqia-react-native';
 
 type Props = {};
 export default class App extends Component<Props> {
-  initSdk = () => {
+  componentDidMount() {
+    this.initSdk();
+
+    AppState.addEventListener('change', this.handleAppStateChange);
+  }
+
+  componentWillUnmount() {
+    AppState.removeEventListener('change', this.handleAppStateChange);
+  }
+
+  handleAppStateChange = (nextAppState) => {
+    if (nextAppState === 'active') {
+      MeiqiaStartService();
+    } else {
+      MeiqiaStopService();
+    }
+  };
+
+  initSdk() {
     MeiqiaInit({appKey:'b20bf39620fdd43f11128182ff77a551'}).then((data)=>{
       alert(JSON.stringify(data));
+
+      MeiqiaStartService();
     });
   };
 
@@ -41,7 +61,6 @@ export default class App extends Component<Props> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions} onPress={this.initSdk}>点击我，显示信息</Text>
         <Text style={styles.instructions} onPress={this.letUsChat}>出来吧，悟空</Text>
       </View>
     );
