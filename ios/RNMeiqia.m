@@ -1,6 +1,7 @@
-#import "RNMeiqia.h"
+#import <React/RCTConvert.h>
 #import <MeiQiaSDK/MQManager.h>
 #import "MQChatViewManager.h"
+#import "RNMeiqia.h"
 #import "UIColor+Hex.h"
 
 @implementation RNMeiqia
@@ -33,6 +34,20 @@ RCT_EXPORT_METHOD(init: (NSDictionary *)param resolve: (RCTPromiseResolveBlock)r
     }
 }
 
+// APP 在前台运行
+RCT_EXPORT_METHOD(openMeiqiaService) {
+    [MQManager openMeiqiaService];
+}
+
+// APP 在后台运行
+RCT_EXPORT_METHOD(closeMeiqiaService) {
+    [MQManager closeMeiqiaService];
+}
+
+RCT_EXPORT_METHOD(registerDeviceToken:(NSString *)deviceToken) {
+   [MQManager registerDeviceToken:[RCTConvert NSData:deviceToken]];
+}
+
 //跳转到聊天界面
 RCT_EXPORT_METHOD(show: (NSDictionary *)param resolve: (RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
     MQChatViewManager *chatViewManager = [[MQChatViewManager alloc] init];
@@ -46,30 +61,30 @@ RCT_EXPORT_METHOD(show: (NSDictionary *)param resolve: (RCTPromiseResolveBlock)r
         NSString *titleBarColor = (NSString *)param[@"titleBarColor"];
         [aStyle setNavBarColor: [UIColor colorWithHexString: titleBarColor]];
     }
-    
+
     if((NSString *)param[@"naviColor"]){
         NSString *naviColor = (NSString *)param[@"naviColor"];
         [aStyle setNavBarTintColor: [UIColor colorWithHexString: naviColor]];
     }
-    
+
     [aStyle setNavBackButtonImage:[UIImage imageNamed:@"meiqia-icon"]];
     // 设置圆形头像
     [aStyle setEnableRoundAvatar:YES];
     // [aStyle setEnableOutgoingAvatar:NO]; //不显示用户头像
     // [aStyle setEnableIncomingAvatar:NO]; //不显示客服头像
-    
+
     // 设置客户端信息
     if((NSDictionary *)param[@"clientInfo"]){
         NSDictionary *clientInfo = (NSDictionary *)param[@"clientInfo"];
         [chatViewManager setClientInfo: clientInfo];
     }
-    
+
     //设置美洽clientId
     if((NSDictionary *)param[@"clientId"]&&(NSString *)param[@"clientId"][@"id"]&&![(NSString *)param[@"clientId"][@"id"] isEqual:@""]){
         NSDictionary *clientInfo = (NSDictionary *)param[@"clientId"][@"id"];
         [chatViewManager setClientInfo: clientInfo];
     }
-    
+
     //customId
     if ((NSString *)param[@"customId"]&&(NSString *)param[@"customId"][@"id"]&&![(NSString *)param[@"customId"][@"id"] isEqual:@""]){
         NSString *customId = (NSString *)param[@"customId"][@"id"];
@@ -78,7 +93,7 @@ RCT_EXPORT_METHOD(show: (NSDictionary *)param resolve: (RCTPromiseResolveBlock)r
 #pragma mark 切记切记切记 下面这一行是错误的写法 , 这样会导致 ID = "notadda" 和 meiqia多个用户绑定,最终导致 对话内容错乱 A客户能看到 B C D的客户的对话内容
         [chatViewManager setLoginCustomizedId:@"notadda"];
     }
-    
+
     //客服组scheduledInfo
     //分配到指定客服，或指定组里面的客服，指定客服优先级高，并可选择分配失败后的转接规则
     NSString *agentId = nil;
@@ -103,7 +118,7 @@ RCT_EXPORT_METHOD(show: (NSDictionary *)param resolve: (RCTPromiseResolveBlock)r
             rule = 3;
         }
     }
-    
+
     [MQManager setScheduledAgentWithAgentId:agentId agentGroupId:agentGroupId scheduleRule:rule];
     //客服组scheduledInfo
     [chatViewManager pushMQChatViewControllerInViewController:[UIApplication sharedApplication].delegate.window.rootViewController];

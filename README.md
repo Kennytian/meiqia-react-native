@@ -20,12 +20,15 @@ or
 `$ react-native link meiqia-react-native`
 
 #### iOS
-1. Select you app target on XCode and click the `Build Settings` tab. Go to the `Framework Search Paths` section and add this new entry
+1. Select you app target on XCode and click the `Build Settings` tab. Go to the `Framework Search Paths` section and `add` this new entry
    ```
    $(SRCROOT)/../node_modules/meiqia-react-native/ios
    ```
    and make sure it is set to `recursive`
-
+2. Select you app target on XCode and click the `Build Phases` tab. Go to the `Copy Bundle Resources` section and `add` this new entry
+      ```
+      node_modules/meiqia-react-native/ios/MeiQiaSDK/MQChatViewController/Assets/MQChatViewAsset.bundle
+      ``` 
 ### Manual installation
 
 #### iOS
@@ -38,7 +41,11 @@ or
    $(SRCROOT)/../node_modules/meiqia-react-native/ios
    ```
    and make sure it is set to `recursive`
-5. Run your project (`Cmd+R`)<
+5. Select you app target on XCode and click the `Build Phases` tab. Go to the `Copy Bundle Resources` section and `add` this new entry
+   ```
+   node_modules/meiqia-react-native/ios/MeiQiaSDK/MQChatViewController/Assets/MQChatViewAsset.bundle
+   ``` 
+6. Run your project (`Cmd+R`)<
 
 #### Android
 
@@ -105,7 +112,7 @@ MeiqiaShow({
 ## APIs
 ### MeiqiaInit
 
-MeiqiaInit({param1, param2, ...});
+`MeiqiaInit({param1, param2, ...});`
 
 | param name | param type | default value | platform
 | :------: | :------ | :------ | :------: |
@@ -113,7 +120,7 @@ MeiqiaInit({param1, param2, ...});
 
 ### MeiqiaShow
 
-MeiqiaShow({param1, param2, ...});
+`MeiqiaShow({param1, param2, ...});`
 
 | param name | param type | default value | platform
 | :------: | :------ | :------ | :------: |
@@ -124,6 +131,24 @@ MeiqiaShow({param1, param2, ...});
 | customId | Object | {} | all
 | clientId | Object | {} | all
 | scheduledInfo | Object | {} | all
+
+### MeiqiaStartService
+
+`MeiqiaStartService();`
+
+> NOTICE: This function is  only for iOS
+
+### MeiqiaStopService
+                     
+`MeiqiaStopService();`
+
+> NOTICE: This function only for iOS
+
+### MeiqiaRegisterDeviceToken
+
+`MeiqiaRegisterDeviceToken('xxxx-xxx-xxx');`
+
+> NOTICE: This function only for iOS
 
 ## Screenshot
 

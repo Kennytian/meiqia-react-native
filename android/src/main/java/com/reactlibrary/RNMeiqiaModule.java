@@ -4,7 +4,7 @@ import android.content.Intent;
 
 import com.facebook.react.bridge.*;
 import com.meiqia.core.MQScheduleRule;
-import com.meiqia.meiqiasdk.imageloader.MQGlideImageLoader;
+import com.meiqia.meiqiasdk.imageloader.MQPicassoImageLoader;
 import com.meiqia.meiqiasdk.imageloader.MQImage;
 import com.meiqia.meiqiasdk.util.MQConfig;
 import com.meiqia.core.callback.OnInitCallback;
