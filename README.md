@@ -20,12 +20,15 @@ or
 `$ react-native link meiqia-react-native`
 
 #### iOS
-1. Select you app target on XCode and click the `Build Settings` tab. Go to the `Framework Search Paths` section and add this new entry
+1. Select you app target on XCode and click the `Build Settings` tab. Go to the `Framework Search Paths` section and `add` this new entry
    ```
    $(SRCROOT)/../node_modules/meiqia-react-native/ios
    ```
    and make sure it is set to `recursive`
-
+2. Select you app target on XCode and click the `Build Phases` tab. Go to the `Copy Bundle Resources` section and `add` this new entry
+      ```
+      node_modules/meiqia-react-native/ios/MeiQiaSDK/MQChatViewController/Assets/MQChatViewAsset.bundle
+      ``` 
 ### Manual installation
 
 #### iOS
@@ -38,7 +41,11 @@ or
    $(SRCROOT)/../node_modules/meiqia-react-native/ios
    ```
    and make sure it is set to `recursive`
-5. Run your project (`Cmd+R`)<
+5. Select you app target on XCode and click the `Build Phases` tab. Go to the `Copy Bundle Resources` section and `add` this new entry
+   ```
+   node_modules/meiqia-react-native/ios/MeiQiaSDK/MQChatViewController/Assets/MQChatViewAsset.bundle
+   ``` 
+6. Run your project (`Cmd+R`)<
 
 #### Android
 
