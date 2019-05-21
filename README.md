@@ -1,11 +1,12 @@
 # MeiQia SDK for React Native
 
-[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Kennytian/meiqia-react-native/pulls)
-[![npm](https://img.shields.io/npm/v/meiqia-react-native.svg)](https://www.npmjs.com/package/meiqia-react-native)
-[![Downloads](https://img.shields.io/npm/dm/meiqia-react-native.svg)](https://www.npmjs.com/package/meiqia-react-native)
-![GitHub contributors](https://img.shields.io/github/contributors/Kennytian/meiqia-react-native.svg)
-![GitHub last commit](https://img.shields.io/github/last-commit/Kennytian/meiqia-react-native.svg)
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg?style=flat-square)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/Kennytian/meiqia-react-native/pulls)
+[![npm](https://img.shields.io/npm/v/meiqia-react-native.svg?style=flat-square)](https://www.npmjs.com/package/meiqia-react-native)
+[![Downloads](https://img.shields.io/npm/dm/meiqia-react-native.svg?style=flat-square)](https://www.npmjs.com/package/meiqia-react-native)
+![GitHub contributors](https://img.shields.io/github/contributors/Kennytian/meiqia-react-native.svg?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/Kennytian/meiqia-react-native.svg?style=flat-square)
+[![HitCount](http://hits.dwyl.io/Kennytian/meiqia-react-native.svg)](http://hits.dwyl.io/Kennytian/meiqia-react-native)
 
 ## Getting started
 
@@ -26,9 +27,9 @@ or
    ```
    and make sure it is set to `recursive`
 2. Select you app target on XCode and click the `Build Phases` tab. Go to the `Copy Bundle Resources` section and `add` this new entry
-      ```
-      node_modules/meiqia-react-native/ios/MeiQiaSDK/MQChatViewController/Assets/MQChatViewAsset.bundle
-      ``` 
+   ```
+   node_modules/meiqia-react-native/ios/MeiQiaSDK/MQChatViewController/Assets/MQChatViewAsset.bundle
+   ``` 
 ### Manual installation
 
 #### iOS
