@@ -8,8 +8,8 @@ export async function MeiqiaInit(params) {
 }
 
 export function MeiqiaShow(params = {}) {
-    const data = {clientInfo:{}, ...params};
-    RNMeiqia.show(data);
+    // const data = {clientInfo:{}, ...params};
+    RNMeiqia.show(params);
 }
 
 export function MeiqiaStartService() {
