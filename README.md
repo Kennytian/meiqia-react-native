@@ -80,7 +80,7 @@ MeiqiaInit({ appKey:'xxx' }).then((config)=>{
 
 #### launch chat window
 ```javascript
-MeiqiaShow(); 
+MeiqiaShow({}); 
 ```
 or, if you known
 
