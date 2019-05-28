@@ -7,6 +7,7 @@
     "android-debug": "react-native run-android --port 8081",
     "ios-5s": "react-native run-ios --port 8081 --simulator=\"iPhone 5s\"",
     "android-9.0": "$ANDROID_HOME/tools/emulator @Pixel_2_XL_API_28",
+    "ios-config": "node ./node_modules/meiqia-react-native/ios-configuration.js examples",
     "test": "jest"
   },
   "dependencies": {
