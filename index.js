@@ -13,15 +13,11 @@ export function MeiqiaShow(params = {}) {
 }
 
 export function MeiqiaStartService() {
-    if(Platform.OS === 'ios') {
-        RNMeiqia.openMeiqiaService();
-    }
+    RNMeiqia.openMeiqiaService();
 }
 
 export function MeiqiaStopService() {
-    if(Platform.OS === 'ios') {
-        RNMeiqia.closeMeiqiaService();
-    }
+    RNMeiqia.closeMeiqiaService();
 }
 
 export function MeiqiaRegisterDeviceToken(deviceToken) {

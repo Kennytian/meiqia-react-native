@@ -3,6 +3,7 @@ package com.reactlibrary;
 import android.content.Intent;
 
 import com.facebook.react.bridge.*;
+import com.meiqia.core.MQManager;
 import com.meiqia.core.MQScheduleRule;
 import com.meiqia.meiqiasdk.imageloader.MQPicassoImageLoader;
 import com.meiqia.meiqiasdk.imageloader.MQImage;
@@ -57,17 +58,14 @@ public class RNMeiqiaModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void show(final ReadableMap data, final Promise p) {
-
+    public void show(final ReadableMap data) {
         if (data.hasKey("titleColor") && !data.getString("titleColor").equals("")) {
-
         }
 
         if (data.hasKey("titleBarColor") && !data.getString("titleBarColor").equals("")) {
         }
 
         if (data.hasKey("naviColor") && !data.getString("naviColor").equals("")) {
-
         }
 
         HashMap<String, Object> mapTemp = data.getMap("clientInfo").toHashMap();
@@ -112,5 +110,15 @@ public class RNMeiqiaModule extends ReactContextBaseJavaModule {
         MQImage.setImageLoader(new MQPicassoImageLoader());
         Intent intent = intentConfig.build();
         reactContext.startActivity(intent);
+    }
+
+    @ReactMethod
+    public void openMeiqiaService() {
+        MQManager.getInstance(reactContext).openMeiqiaService();
+    }
+
+    @ReactMethod
+    public void closeMeiqiaService() {
+        MQManager.getInstance(reactContext).closeMeiqiaService();
     }
 }

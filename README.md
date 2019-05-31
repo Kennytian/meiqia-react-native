@@ -4,8 +4,8 @@
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/Kennytian/meiqia-react-native/pulls)
 [![npm](https://img.shields.io/npm/v/meiqia-react-native.svg?style=flat-square)](https://www.npmjs.com/package/meiqia-react-native)
 [![Downloads](https://img.shields.io/npm/dm/meiqia-react-native.svg?style=flat-square)](https://www.npmjs.com/package/meiqia-react-native)
-![GitHub contributors](https://img.shields.io/github/contributors/Kennytian/meiqia-react-native.svg?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/Kennytian/meiqia-react-native.svg?style=flat-square)
+[![GitHub contributors](https://img.shields.io/github/contributors/Kennytian/meiqia-react-native.svg?style=flat-square)](https://github.com/Kennytian/meiqia-react-native/graphs/contributors)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Kennytian/meiqia-react-native.svg?style=flat-square)](https://github.com/Kennytian/meiqia-react-native/commits/master)
 ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg?style=flat-square)
 [![HitCount](http://hits.dwyl.io/Kennytian/meiqia-react-native.svg)](http://hits.dwyl.io/Kennytian/meiqia-react-native)
 
@@ -138,13 +138,9 @@ MeiqiaShow({
 
 `MeiqiaStartService();`
 
-> NOTICE: This function is  only for iOS
-
 ### MeiqiaStopService
                      
 `MeiqiaStopService();`
-
-> NOTICE: This function only for iOS
 
 ### MeiqiaRegisterDeviceToken
 
