@@ -55,6 +55,7 @@ static CGFloat const kMQChatViewInputBarHeight = 80.0;
 @property (nonatomic, strong) MQKeyboardController *keyboardView;
 @property (nonatomic, strong) MQRecordView *recordView;
 @property (nonatomic, strong) MQRecorderView *displayRecordView;//只用来显示
+@property (nonatomic, assign) BOOL needScrollEnd;//是否需要滚动到底部
 
 @end
 
@@ -104,6 +105,11 @@ static CGFloat const kMQChatViewInputBarHeight = 80.0;
     [[UIApplication sharedApplication] setStatusBarStyle:[MQChatViewConfig sharedConfig].chatViewStyle.statusBarStyle];
     [self setNeedsStatusBarAppearanceUpdate];
     
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wconversion"
+    [self.navigationController.navigationBar setBarStyle:[MQChatViewConfig sharedConfig].chatViewStyle.statusBarStyle];
+#pragma clang diagnostic pop
+
     sendTime = [NSDate timeIntervalSinceReferenceDate];
     self.view.backgroundColor = [MQChatViewConfig sharedConfig].chatViewStyle.backgroundColor ?: [UIColor colorWithWhite:0.95 alpha:1];
     [self initChatTableView];
@@ -413,6 +419,17 @@ static CGFloat const kMQChatViewInputBarHeight = 80.0;
 }
 
 - (void)didGetHistoryMessagesWithCommitTableAdjustment:(void(^)(void))commitTableAdjustment {
+    if (self.needScrollEnd) {
+        self.needScrollEnd = NO;
+        float contentSizeHeight = self.chatTableView.contentSize.height;
+        float frameSizeHeight = self.chatTableView.frame.size.height;
+        if (contentSizeHeight > frameSizeHeight) {
+            CGPoint offset = CGPointMake(0, contentSizeHeight - frameSizeHeight);
+            [self.chatTableView setContentOffset:offset animated:NO];
+            [self.chatTableView flashScrollIndicators];
+        }
+        return;
+    }
     __weak typeof(self) wself = self;
     [self.chatTableView stopAnimationCompletion:^{
         __strong typeof (wself) sself = wself;
@@ -1252,7 +1269,7 @@ static CGFloat const kMQChatViewInputBarHeight = 80.0;
         [self.chatViewService setClientOnline];
         //延时2秒 获取所有的历史记录
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            
+            self.needScrollEnd = YES;
             [self.chatViewService startGettingHistoryMessagesFromLastMessage];
         });
         
