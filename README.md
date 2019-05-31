@@ -158,3 +158,21 @@ MeiqiaShow({
 
 ### iOS
 ![](./screenshot/screenshot3.png)
+
+## Debugging
+
+#### iOS
+>Q: Why debugging on real device, the UI language is English?
+
+In order to properly recognize the App's system language, you need to add a Localizations configuration. If you need to support English, Simplified Chinese, and Traditional Chinese, you need the following configuration in the Source Code of `info.plist`:
+
+```xml
+<key>CFBundleLocalizations</key>
+<array>
+    <string>zh_CN</string>
+    <string>zh_TW</string>
+    <string>en</string>
+</array>
+```
+
+or you also can run npm script: `node ./node_modules/meiqia-react-native/ios-configuration.js YOUR_APP_NAME`
