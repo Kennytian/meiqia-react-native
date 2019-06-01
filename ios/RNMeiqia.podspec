@@ -1,8 +1,10 @@
+require 'json'
+package = JSON.parse(File.read(File.join(__dir__, '../', 'package.json')))
 
 Pod::Spec.new do |s|
   s.name         = "RNMeiqia"
-  s.version      = "0.1.1"
-  s.summary      = "RNMeiqia"
+  s.version      = package['version']
+  s.summary      = "MeiQia SDK for React Native"
   s.description  = <<-DESC
                   RNMeiqia
                    DESC
@@ -12,7 +14,8 @@ Pod::Spec.new do |s|
   s.author             = { "Kenny Tian" => "kenny_tian@outlook.com" }
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/Kennytian/meiqia-react-native.git", :tag => "master" }
-  s.source_files  = "RNMeiqia/**/*.{h,m}"
+  s.source_files  = "ios/**/*.{h,m}"
+  s.resources = ['*.bundle', '*.strings']
   s.requires_arc = true
 
   s.dependency "React"
