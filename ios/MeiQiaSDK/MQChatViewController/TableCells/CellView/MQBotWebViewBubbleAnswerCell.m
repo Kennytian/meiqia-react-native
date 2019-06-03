@@ -182,6 +182,7 @@
     if (!_contentWebView) {
         _contentWebView = [MQEmbededWebView new];
         _contentWebView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        _contentWebView.scrollView.scrollEnabled = YES;
     }
     return _contentWebView;
 }
@@ -244,7 +245,7 @@
     lineV.viewHeight = HEIHGT_VIEW_EVALUATE;
     lineV.viewWidth = 0.5;
     [lineV align:(ViewAlignmentTopLeft) relativeToPoint:usefulButton.rightTopCorner];
-    lineV.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
+    lineV.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
     
     UIButton *uselessButton = [UIButton new];
     [uselessButton setTitleColor:[MQChatViewConfig sharedConfig].chatViewStyle.btnTextColor forState:(UIControlStateNormal)];
