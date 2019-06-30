@@ -11,7 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "meiqia-react-native": "^0.1.1",
+    "meiqia-react-native": "^0.1.5",
     "react": "16.6.1",
     "react-native": "0.57.5"
   },
