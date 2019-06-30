@@ -4,7 +4,7 @@ declare module 'meiqia-react-native' {
   }
 
   interface InitResult {
-    code?: number;
+    code?: string;
     clientId?: string;
     message?: string;
   }
