@@ -15,13 +15,14 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
+    def packageJson = new groovy.json.JsonSlurper().parseText(file('../package.json').text)
     compileSdkVersion safeExtGet("compileSdkVersion", 25)
-    buildToolsVersion safeExtGet("buildToolsVersion", '25.0.2')
+    buildToolsVersion safeExtGet("buildToolsVersion", '25.0.3')
     defaultConfig {
         minSdkVersion safeExtGet('minSdkVersion', 16)
         targetSdkVersion safeExtGet('targetSdkVersion', 25)
         versionCode 1
-        versionName "1.0"
+        versionName packageJson.version
     }
     lintOptions {
         abortOnError false
@@ -35,7 +36,7 @@ repositories {
 dependencies {
     implementation 'com.facebook.react:react-native:+'
     implementation 'com.meiqia:meiqiasdk:+'
-    implementation 'com.android.support:support-v4:27.1.1'
+    implementation "com.android.support:support-v4:${safeExtGet('supportLibVersion', '25.3.1')}"
     implementation 'com.squareup.okhttp3:okhttp:3.5.0'
     implementation 'com.squareup.picasso:picasso:2.5.2'
 }
