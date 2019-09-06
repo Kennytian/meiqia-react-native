@@ -4,8 +4,12 @@ const path = require("path");
 const appName = process.argv[2];
 
 const configiOS = () => {
-  const iosRootPath = `${ __dirname }/../../ios/`;
-  const plistPath = `${ appName }/Info.plist`;
+  if(!appName) {
+    console.log('The appName is not specific, see https://github.com/Kennytian/meiqia-react-native#ios-3');
+    return;
+  }
+  const iosRootPath = `${__dirname}/../../ios/`;
+  const plistPath = `${appName}/Info.plist`;
   const filePath = path.join(iosRootPath, plistPath);
 
   fs.readFile(filePath, 'utf-8', (readErr, file) => {
