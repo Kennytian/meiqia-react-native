@@ -11,16 +11,11 @@
     "test": "jest"
   },
   "dependencies": {
-    "meiqia-react-native": "^0.1.5",
-    "react": "16.6.1",
-    "react-native": "0.57.5"
+    "meiqia-react-native": "../../",
+    "react": "16.9.0",
+    "react-native": "0.61.5"
   },
-  "devDependencies": {
-    "babel-jest": "24.8.0",
-    "jest": "24.8.0",
-    "metro-react-native-babel-preset": "0.54.1",
-    "react-test-renderer": "16.6.1"
-  },
+  "devDependencies": {},
   "jest": {
     "preset": "react-native"
   }
