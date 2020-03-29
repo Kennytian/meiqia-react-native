@@ -5,17 +5,26 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "android-debug": "react-native run-android --port 8081",
-    "ios-5s": "react-native run-ios --port 8081 --simulator=\"iPhone 5s\"",
+    "ios-8": "react-native run-ios --port 8081 --simulator=\"iPhone 8\"",
     "android-9.0": "$ANDROID_HOME/tools/emulator @Pixel_2_XL_API_28",
     "ios-config": "node ./node_modules/meiqia-react-native/ios-configuration.js examples",
     "test": "jest"
   },
   "dependencies": {
-    "meiqia-react-native": "../../",
     "react": "16.9.0",
-    "react-native": "0.61.5"
+    "react-native": "0.61.5",
+    "react-native-weight": "../"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.56.0",
+    "react-test-renderer": "16.9.0"
+  },
   "jest": {
     "preset": "react-native"
   }

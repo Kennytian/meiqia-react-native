@@ -6,23 +6,14 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import { AppState, StyleSheet, Text, View } from 'react-native';
-import { MeiqiaInit, MeiqiaShow, MeiqiaStartService, MeiqiaStopService } from 'meiqia-react-native';
+import React, { useEffect } from 'react';
+import { AppState, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View, } from 'react-native';
 
-type Props = {};
-export default class App extends Component<Props> {
-  componentDidMount() {
-    this.initSdk();
+import { Colors, DebugInstructions, Header, ReloadInstructions, } from 'react-native/Libraries/NewAppScreen';
+import { MeiqiaInit, MeiqiaStartService, MeiqiaStopService, MeiqiaShow } from 'react-native-weight';
 
-    AppState.addEventListener('change', this.handleAppStateChange);
-  }
-
-  componentWillUnmount() {
-    AppState.removeEventListener('change', this.handleAppStateChange);
-  }
-
-  handleAppStateChange = (nextAppState) => {
+const App: () => React$Node = () => {
+  const handleAppStateChange = (nextAppState) => {
     if (nextAppState === 'active') {
       MeiqiaStartService();
     } else {
@@ -30,15 +21,15 @@ export default class App extends Component<Props> {
     }
   };
 
-  initSdk() {
-    MeiqiaInit({appKey:'b20bf39620fdd43f11128182ff77a551'}).then((data)=>{
+  const initSdk = () => {
+    MeiqiaInit({appKey: 'b20bf39620fdd43f11128182ff77a551'}).then((data) => {
       alert(JSON.stringify(data));
 
       MeiqiaStartService();
     });
   };
 
-  letUsChat = () => {
+  const letUsChat = () => {
     const data = {
       clientInfo: {
         name: 'Kenny锅',
@@ -57,31 +48,96 @@ export default class App extends Component<Props> {
     MeiqiaShow(data);
   };
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions} onPress={this.letUsChat}>出来吧，悟空</Text>
-      </View>
-    );
-  }
-}
+  useEffect(() => {
+    initSdk();
+
+    AppState.addEventListener('change', handleAppStateChange);
+
+    return () => {
+      AppState.removeEventListener('change', handleAppStateChange);
+    }
+  }, []);
+
+  return (
+    <>
+      <StatusBar barStyle="dark-content"/>
+      <SafeAreaView>
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={ styles.scrollView }>
+          <Header/>
+          { global.HermesInternal == null ? null : (
+            <View style={ styles.engine }>
+              <Text style={ styles.footer }>Engine: Hermes</Text>
+            </View>
+          ) }
+          <View style={ styles.body }>
+            <View style={ styles.sectionContainer }>
+              <Text style={ styles.sectionTitle } onPress={ letUsChat }>出来吧，悟空</Text>
+            </View>
+            <View style={ styles.sectionContainer }>
+              <Text style={ styles.sectionTitle }>See Your Changes</Text>
+              <Text style={ styles.sectionDescription }>
+                <ReloadInstructions/>
+              </Text>
+            </View>
+            <View style={ styles.sectionContainer }>
+              <Text style={ styles.sectionTitle }>Debug</Text>
+              <Text style={ styles.sectionDescription }>
+                <DebugInstructions/>
+              </Text>
+            </View>
+            <View style={ styles.sectionContainer }>
+              <Text style={ styles.sectionTitle }>Learn More</Text>
+              <Text style={ styles.sectionDescription }>
+                Read the docs to discover what to do next:
+              </Text>
+            </View>
+
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+    </>
+  );
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+  scrollView: {
+    backgroundColor: Colors.lighter,
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  engine: {
+    position: 'absolute',
+    right: 0,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  body: {
+    backgroundColor: Colors.white,
+  },
+  sectionContainer: {
+    marginTop: 32,
+    paddingHorizontal: 24,
+  },
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: '600',
+    color: Colors.black,
+  },
+  sectionDescription: {
+    marginTop: 8,
+    fontSize: 18,
+    fontWeight: '400',
+    color: Colors.dark,
+  },
+  highlight: {
+    fontWeight: '700',
+  },
+  footer: {
+    color: Colors.dark,
+    fontSize: 12,
+    fontWeight: '600',
+    padding: 4,
+    paddingRight: 12,
+    textAlign: 'right',
   },
 });
+
+export default App;
