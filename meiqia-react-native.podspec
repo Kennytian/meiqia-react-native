@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.requires_arc  = true
 
   s.dependency "React"
-  s.dependency 'Meiqia', '~> 3.5.0'
+  s.dependency 'Meiqia', '~> 3.6'
 
 end
 
