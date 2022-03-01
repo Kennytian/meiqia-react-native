@@ -76,7 +76,8 @@ RCT_EXPORT_METHOD(show: (NSDictionary *)param resolve: (RCTPromiseResolveBlock)r
     // 设置客户端信息
     if((NSDictionary *)param[@"clientInfo"]){
         NSDictionary *clientInfo = (NSDictionary *)param[@"clientInfo"];
-        [chatViewManager setClientInfo: clientInfo];
+        // [chatViewManager setClientInfo: clientInfo];
+        [chatViewManager setClientInfo: clientInfo override:YES];
     }
 
     //设置美洽clientId

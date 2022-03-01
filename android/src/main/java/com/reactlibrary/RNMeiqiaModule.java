@@ -108,7 +108,8 @@ public class RNMeiqiaModule extends ReactContextBaseJavaModule {
             }
         }
         MQImage.setImageLoader(new MQPicassoImageLoader());
-        Intent intent = intentConfig.build();
+        // Intent intent = intentConfig.build();
+        Intent intent = intentConfig.updateClientInfo(clientInfo).build();
         reactContext.startActivity(intent);
     }
 
