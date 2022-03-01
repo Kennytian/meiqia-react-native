@@ -7,7 +7,6 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/Kennytian/meiqia-react-native.svg?style=flat-square)](https://github.com/Kennytian/meiqia-react-native/graphs/contributors)
 [![GitHub last commit](https://img.shields.io/github/last-commit/Kennytian/meiqia-react-native.svg?style=flat-square)](https://github.com/Kennytian/meiqia-react-native/commits/master)
 ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg?style=flat-square)
-[![HitCount](http://hits.dwyl.io/Kennytian/meiqia-react-native.svg)](http://hits.dwyl.io/Kennytian/meiqia-react-native)
 
 ## Getting started
 
